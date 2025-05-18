@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sowndarya Kottala Muthuraj - Cybersecurity Portfolio</title>
+    <style>
+      /* Reset & base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff;
+        color: #222;
+        line-height: 1.6;
+        width: 100vw;
+        overflow-x: hidden;
+      }
+      a {
+        color: #0070f3;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Circular profile pic */
+      header {
+        padding: 60px 20px 40px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        background: #f9fafb;
+        width: 100vw;
+      }
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        background: #cbd5e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: #94a3b8;
+        user-select: none;
+        box-shadow: 0 6px 12px rgb(0 0 0 / 0.12);
+        overflow: hidden;
+      }
+      .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      header p {
+        color: #555;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      header a.email {
+        font-size: 1.1rem;
+        color: #555;
+      }
+      nav {
+        margin-top: 40px;
+        text-align: center;
+      }
+      nav a {
+        margin: 0 18px;
+        font-weight: 600;
+        font-size: 1.15rem;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+      nav a:hover {
+        background-color: #0070f3;
+        color: #fff;
+      }
+
+      /* Sections with pale backgrounds, tall and centered content */
+      section {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 20px;
+        border-bottom: 1px solid #eee;
+        background-color: #fff;
+        width: 100vw;
+      }
+      section:nth-of-type(odd) {
+        background-color: #f8fafc; /* very pale blue */
+      }
+      section:nth-of-type(even) {
+        background-color: #ffffff; /* white */
+      }
+      section:last-child {
+        border-bottom: none;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #0070f3;
+        border-left: 6px solid #0070f3;
+        padding-left: 14px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Center content inside sections */
+      .content-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      /* Profile Section */
+      #profile p {
+        font-size: 1.2rem;
+        color: #444;
+        line-height: 1.75;
+      }
+
+      /* Experience, Education, Projects */
+      .item {
+        margin-bottom: 35px;
+      }
+      .item h3 {
+        font-size: 1.4rem;
+        color: #111;
+        margin-bottom: 6px;
+      }
+      .item .subtitle {
+        font-style: italic;
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+      .item ul {
+        list-style-type: disc;
+        margin-left: 24px;
+        color: #333;
+      }
+      .item ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Skills - horizontal pill list */
+      #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+      }
+      #skills ul li {
+        background-color: #0070f3;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        user-select: none;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 30px 15px 25px;
+        color: #888;
+        font-size: 1rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        nav a {
+          margin: 12px 10px;
+          display: inline-block;
+          font-size: 1.1rem;
+          padding: 7px 14px;
+        }
+        .content-wrapper {
+          padding: 0 15px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        header h1 {
+          font-size: 2.8rem;
+        }
+        h2 {
+          font-size: 2rem;
+          max-width: 90%;
+        }
+        section {
+          min-height: 420px;
+          padding: 60px 15px;
+        }
+        .profile-pic {
+          width: 140px;
+          height: 140px;
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="profile-pic" aria-label="Profile picture placeholder">SK</div>
+      <!-- If you want an actual image, replace above div with:
+  <div class="profile-pic"><img src="profile.jpg" alt="Sowndarya Kottala Muthuraj" /></div>
+  -->
+      <h1>Sowndarya Kottala Muthuraj</h1>
+      <p>Cybersecurity Professional | Aberdeen, UK</p>
+      <p><a class="email" href="mailto:Riatharaa@gmail.com@gmail.com">riatharaa@gmail.com</a></p>
+
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="profile">
+        <h2>Profile</h2>
+        <div class="content-wrapper">
+          <p>
+            Cybersecurity professional with 2+ years of experience in threat
+            analysis, malware detection, and network security. Master’s in
+            Cybersecurity with expertise in Python, machine learning, and
+            Android malware analysis. Certified in ransomware prevention, with
+            hands-on experience in secure web development and application
+            deployment. Completed 100+ advanced labs on TryHackMe and Hack The
+            Box, strengthening real-world cybersecurity skills. Seeking a
+            Cybersecurity Analyst role to drive threat mitigation, incident
+            response, and secure web development initiatives.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="content-wrapper">
+          <div class="item">
+            <h3>Intern (Web Development) — GAO.Tek Inc, Aberdeen, UK</h3>
+            <p class="subtitle">2025 – Present</p>
+            <ul>
+              <li>
+                Engineered front-end components, reducing bounce rate by 15% and
+                improving website accessibility score to 95/100.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to improve usability by
+                30%.
+              </li>
+              <li>
+                Debugged, tested, optimized front-end components for 25% faster
+                load times.
+              </li>
+              <li>
+                Performed 3-5 code reviews weekly, mentoring juniors and
+                eliminating 20+ bugs before production.
+              </li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Shift Manager — Burger King, Aberdeen, UK</h3>
+            <p class="subtitle">2023 – 2025</p>
+            <ul>
+              <li>
+                Managed daily operations, staff performance, and inventory.
+              </li>
+              <li>
+                Ensured compliance with health, safety, and cash handling
+                procedures.
+              </li>
+              <li>
+                Resolved 95% of customer complaints within 24 hours, improving
+                customer loyalty.
+              </li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Intern — Optech Software, Erode, India</h3>
+            <p class="subtitle">2021</p>
+            <ul>
+              <li>
+                Built a location-aware search engine serving 1,000+ users with
+                real-time personalized results.
+              </li>
+              <li>Analyzed 500+ datasets for feature optimization.</li>
+              <li>
+                Executed 100+ tests ensuring system accuracy and reliability.
+              </li>
+              <li>Delivered 10+ technical reports with strategic insights.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Intern — Uniq Technology, Coimbatore, India</h3>
+            <p class="subtitle">2019</p>
+            <ul>
+              <li>
+                Analyzed large-scale datasets using Hadoop and Apache Spark.
+              </li>
+              <li>
+                Implemented machine learning algorithms to extract actionable
+                insights.
+              </li>
+              <li>
+                Completed end-to-end data projects and developed dashboards for
+                decision-making.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="content-wrapper">
+          <div class="item">
+            <h3>MSc in Cyber Security (First Class Distinction)</h3>
+            <p class="subtitle">
+              Robert Gordon University, Aberdeen — 2022-2023
+            </p>
+          </div>
+
+          <div class="item">
+            <h3>Master Of Computer Application</h3>
+            <p class="subtitle">
+              Anna University, India — 2019-2021 (CGPA 9.32)
+            </p>
+          </div>
+
+          <div class="item">
+            <h3>Bachelor Of Computer Application</h3>
+            <p class="subtitle">
+              Periyar University, India — 2016-2019 (CGPA 8.9)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="content-wrapper">
+          <div class="item">
+            <h3>Android Malware Analysis System</h3>
+            <ul>
+              <li>
+                Designed a malware analysis platform for Android apps using
+                machine learning.
+              </li>
+              <li>
+                Implemented static and dynamic analysis modules to detect
+                malicious behavior.
+              </li>
+              <li>
+                Achieved 92% accuracy in malware detection on benchmark
+                datasets.
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Ransomware Prevention Framework</h3>
+            <ul>
+              <li>
+                Developed a framework to detect and prevent ransomware attacks
+                in real-time.
+              </li>
+              <li>
+                Integrated with Windows Defender APIs for enhanced protection.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>Machine Learning</li>
+          <li>Malware Analysis</li>
+          <li>Cybersecurity</li>
+          <li>Network Security</li>
+          <li>Android Security</li>
+          <li>Penetration Testing</li>
+          <li>Web Development</li>
+        </ul>
+      </section>
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="content-wrapper">
+          <ul>
+            <li>Certified Ransomware Prevention Specialist</li>
+            <li>TryHackMe: 100+ Labs Completed</li>
+            <li>Hack The Box: Intermediate Offensive Security</li>
+          </ul>
+        </div>
+      </section>
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <div class="content-wrapper">
+          <ul>
+            <li>Reduced web bounce rate by 15% through UI enhancements</li>
+            <li>Improved website accessibility score to 95/100</li>
+            <li>Mentored juniors, resolving 20+ bugs pre-production</li>
+            <li>
+              Managed daily store operations achieving 95% customer satisfaction
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      &copy; 2025 Sowndarya Kottala Muthuraj. All rights reserved.
+    </footer>
+  </body>
+</html>
