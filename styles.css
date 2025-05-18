@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Circular profile pic */
+  header {
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    background: #f9fafb;
+    width: 100vw;
+  }
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #94a3b8;
+    user-select: none;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.12);
+    overflow: hidden;
+  }
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  header p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  header a.email {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  nav {
+    margin-top: 40px;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 18px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: #0070f3;
+    color: #fff;
+  }
+
+  /* Sections with pale backgrounds, tall and centered content */
+  section {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    width: 100vw;
+  }
+  section:nth-of-type(odd) {
+    background-color: #f8fafc; /* very pale blue */
+  }
+  section:nth-of-type(even) {
+    background-color: #ffffff; /* white */
+  }
+  section:last-child {
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0070f3;
+    border-left: 6px solid #0070f3;
+    padding-left: 14px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Center content inside sections */
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  /* Profile Section */
+  #profile p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.75;
+  }
+
+  /* Experience, Education, Projects */
+  .item {
+    margin-bottom: 35px;
+  }
+  .item h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin-bottom: 6px;
+  }
+  .item .subtitle {
+    font-style: italic;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .item ul {
+    list-style-type: disc;
+    margin-left: 24px;
+    color: #333;
+  }
+  .item ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Skills - horizontal pill list */
+  #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+  }
+  #skills ul li {
+    background-color: #0070f3;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    user-select: none;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 15px 25px;
+    color: #888;
+    font-size: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    nav a {
+      margin: 12px 10px;
+      display: inline-block;
+      font-size: 1.1rem;
+      padding: 7px 14px;
+    }
+    .content-wrapper {
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    header h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+      max-width: 90%;
+    }
+    section {
+      min-height: 420px;
+      padding: 60px 15px;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      font-size: 4rem;
+    }
+  }
